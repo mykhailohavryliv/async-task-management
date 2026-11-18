@@ -30,8 +30,6 @@ class TaskCreate(TaskSchema):
 
 
 class TaskUpdate(TaskSchema):
-    model_config = ConfigDict(str_strip_whitespace=True)
-
     title: str | None = Field(default=None, min_length=3, max_length=100)
     description: str | None = None
     status: TaskStatus | None = None
